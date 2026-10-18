@@ -5,7 +5,7 @@
             {{ partial "logo-mark.html" . }}
             <span><i></i><i></i><i></i></span>
         </div>
-        {{ if .IsHome }}<h1 class="wordmark"><a href="{{ "/" | relURL }}" aria-label="Le Coin du Ring, accueil">Le Coin <em>du Ring</em></a></h1>{{ else }}<p class="wordmark"><a href="{{ "/" | relURL }}" aria-label="Le Coin du Ring, accueil">Le Coin <em>du Ring</em></a></p>{{ end }}
+        {{ if .IsHome }}<h1 class="wordmark"><a href="{{ "" | relURL }}" aria-label="Le Coin du Ring, accueil">Le Coin <em>du Ring</em></a></h1>{{ else }}<p class="wordmark"><a href="{{ "" | relURL }}" aria-label="Le Coin du Ring, accueil">Le Coin <em>du Ring</em></a></p>{{ end }}
         <p class="mast-tagline"><span>La boxe, vue depuis le coin</span></p>
         <div class="mast-strip">
             <span>Média indépendant</span>
@@ -17,7 +17,7 @@
 
 <div class="navbar{{ if not .IsHome }} navbar-compact{{ end }}">
     <div class="wrap navbar-inner">
-        <a href="{{ "/" | relURL }}" class="navbar-brand" aria-label="Le Coin du Ring, accueil">{{ partial "logo-mark.html" . }}<span class="navbar-wordmark">Le Coin <em>du Ring</em></span></a>
+        <a href="{{ "" | relURL }}" class="navbar-brand" aria-label="Le Coin du Ring, accueil">{{ partial "logo-mark.html" . }}<span class="navbar-wordmark">Le Coin <em>du Ring</em></span></a>
         <nav class="main-nav" aria-label="Navigation principale">
             {{ $current := .RelPermalink }}
             {{ range site.Menus.main }}

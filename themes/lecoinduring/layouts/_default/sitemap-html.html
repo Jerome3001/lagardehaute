@@ -2,7 +2,7 @@
 <section class="page-hero page-hero-rouge">
     <div class="wrap">
         <nav class="crumbs" aria-label="Fil d'Ariane">
-            <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+            <a href="{{ "" | relURL }}">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
         </nav>
         <h1>{{ .Title }}</h1>
         <div class="page-hero-sub"><p class="deck">Toutes les pages de {{ site.Title }}.</p></div>
@@ -13,7 +13,7 @@
         <section>
             <h2 class="rule-title"><span>Pages principales</span></h2>
             <ul>
-                <li><a href="{{ "/" | relURL }}">Accueil</a></li>
+                <li><a href="{{ "" | relURL }}">Accueil</a></li>
                 <li><a href="{{ "blog/" | relURL }}">Le blog</a></li>
                 <li><a href="{{ "a-propos/" | relURL }}">À propos</a></li>
             </ul>

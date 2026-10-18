@@ -4,7 +4,7 @@
 <section class="page-hero page-hero-{{ $corner }}">
     <div class="wrap">
         <nav class="crumbs" aria-label="Fil d'Ariane">
-            <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span>
+            <a href="{{ "" | relURL }}">Accueil</a><span aria-hidden="true">/</span>
             {{ if not $isBlog }}<a href="{{ "blog/" | relURL }}">Le blog</a><span aria-hidden="true">/</span>{{ end }}
             <span aria-current="page">{{ .Title }}</span>
         </nav>

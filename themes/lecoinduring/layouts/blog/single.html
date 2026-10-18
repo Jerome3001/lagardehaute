@@ -5,7 +5,7 @@
     <header class="post-head">
         <div class="wrap">
             <nav class="crumbs" aria-label="Fil d'Ariane">
-                <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span>
+                <a href="{{ "" | relURL }}">Accueil</a><span aria-hidden="true">/</span>
                 <a href="{{ "blog/" | relURL }}">Le blog</a><span aria-hidden="true">/</span>
                 {{ with $catPage }}<a href="{{ .RelPermalink }}">{{ $cat }}</a>{{ else }}<span>{{ $cat }}</span>{{ end }}
             </nav>
@@ -21,7 +21,7 @@
                     <p class="byline">Par {{ site.Params.author }}{{ if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}<span>Mis à jour le {{ time.Format ":date_long" .Lastmod }}</span>{{ end }}</p>
                 </div>
                 <figure class="post-cover">
-                    {{ with .Params.image }}<img src="{{ . | relURL }}" srcset="{{ replace . ".webp" "-640.webp" | relURL }} 640w, {{ replace . ".webp" "-800.webp" | relURL }} 800w, {{ . | relURL }} 1200w" sizes="(max-width: 960px) 100vw, 40vw" alt="{{ $.Params.imageAlt }}" width="1200" height="750" fetchpriority="high">{{ else }}{{ partial "cover.html" (dict "cat" $cat) }}{{ end }}
+                    {{ with .Params.image }}{{ $p := strings.TrimPrefix "/" . }}<img src="{{ $p | relURL }}" srcset="{{ replace $p ".webp" "-640.webp" | relURL }} 640w, {{ replace $p ".webp" "-800.webp" | relURL }} 800w, {{ $p | relURL }} 1200w" sizes="(max-width: 960px) 100vw, 40vw" alt="{{ $.Params.imageAlt }}" width="1200" height="750" fetchpriority="high">{{ else }}{{ partial "cover.html" (dict "cat" $cat) }}{{ end }}
                     {{ with .Params.imageCredit }}<figcaption>{{ . }}{{ with $.Params.imageSource }} <a href="{{ . }}" rel="noopener" target="_blank">Source</a>{{ end }}{{ with $.Params.imageLicenseUrl }} <a href="{{ . }}" rel="noopener license" target="_blank">Licence</a>{{ end }}</figcaption>{{ end }}
                 </figure>
             </div>
