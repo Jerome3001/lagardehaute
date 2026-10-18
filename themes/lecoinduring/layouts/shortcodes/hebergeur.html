@@ -1,0 +1,8 @@
+{{- with site.Params.hebergeur -}}
+<p>Le site est hébergé par {{ .nom }}{{ with .service }}, au moyen du service {{ . }}{{ end }}.</p>
+{{- with .adresse }}
+<p><strong>Adresse</strong> : {{ . }}{{ with $.Site.Params.hebergeur.site }}<br><strong>Site</strong> : {{ . }}{{ end }}</p>
+{{- end }}
+{{- else -}}
+<p><mark class="todo">[hébergeur à renseigner avant la mise en ligne : nom, adresse et site]</mark></p>
+{{- end -}}

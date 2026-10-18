@@ -1,0 +1,4 @@
+<aside class="callout">
+    {{ with .Get "titre" }}<p class="callout-title">{{ . }}</p>{{ end }}
+    <div>{{ .Inner | markdownify }}</div>
+</aside>

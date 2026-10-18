@@ -1,0 +1,27 @@
+# {{ site.Title }}
+
+> {{ site.Params.description }}
+
+## À propos
+
+{{ site.Title }} est un média francophone consacré à la boxe : analyses (styles, tactiques, techniques), équipements (tests et comparatifs) et actualités. Il couvre aussi les autres sports de combat (MMA, muay thaï, kickboxing, lutte) et la préparation physique.
+
+## Rubriques
+{{ range site.Menus.main }}{{ $p := partial "term-page.html" .URL }}
+- [{{ .Name }}]({{ .URL | absURL }}){{ with $p }}{{ with .Description }} : {{ . }}{{ end }}{{ end }}
+{{- end }}
+
+## Articles
+{{ range (where site.RegularPages "Section" "blog").ByDate.Reverse }}
+- [{{ .Title }}]({{ .Permalink }}) : {{ .Description }}
+{{- else }}
+Aucun article publié pour le moment.
+{{- end }}
+
+## Informations
+
+- [À propos]({{ "a-propos/" | absURL }})
+- Contact : {{ site.Params.contact_email }}
+- Générateur : Hugo
+- Sitemap : {{ "sitemap.xml" | absURL }}
+- Flux RSS : {{ "index.xml" | absURL }}

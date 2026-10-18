@@ -1,0 +1,48 @@
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="foot-mast">
+            <div class="foot-ropes" aria-hidden="true"><i></i><i></i><i></i></div>
+            <p class="foot-wordmark">Le Coin <em>du Ring</em></p>
+            <p class="foot-tagline">La boxe, vue depuis le coin</p>
+        </div>
+
+        <div class="foot-cols">
+            <nav class="foot-col" aria-label="Coin rouge">
+                <h2>Coin rouge</h2>
+                <ul class="index">
+                    {{ range $i, $e := first 3 site.Menus.main }}<li><a href="{{ .URL | relURL }}"><span>{{ .Name }}</span><i></i><b>{{ printf "%02d" (add $i 1) }}</b></a></li>{{ end }}
+                </ul>
+            </nav>
+            <nav class="foot-col" aria-label="Coin bleu">
+                <h2 class="blue">Coin bleu</h2>
+                <ul class="index">
+                    {{ range $i, $e := after 3 site.Menus.main }}<li><a href="{{ .URL | relURL }}"><span>{{ .Name }}</span><i></i><b>{{ printf "%02d" (add $i 4) }}</b></a></li>{{ end }}
+                </ul>
+            </nav>
+            <nav class="foot-col" aria-label="La rédaction">
+                <h2>La rédaction</h2>
+                <ul class="index">
+                    <li><a href="{{ "a-propos/" | relURL }}"><span>À propos</span></a></li>
+                    <li><a href="{{ "plan-du-site/" | relURL }}"><span>Plan du site</span></a></li>
+                    {{ with site.Params.contact_email }}<li><a href="mailto:{{ . }}"><span>Nous écrire</span></a></li>{{ end }}
+                </ul>
+            </nav>
+            <nav class="foot-col" aria-label="Informations légales">
+                <h2>Mentions</h2>
+                <ul class="index">
+                    <li><a href="{{ "mentions-legales/" | relURL }}"><span>Mentions légales</span></a></li>
+                    <li><a href="{{ "politique-de-confidentialite/" | relURL }}"><span>Confidentialité</span></a></li>
+                    <li><a href="{{ "cgu/" | relURL }}"><span>CGU</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="foot-folio">
+        <div class="wrap foot-folio-inner">
+            <span>&copy; {{ now.Year }} {{ site.Title }}</span>
+            <span class="foot-edition">Édition du {{ time.Format ":date_long" now }}</span>
+            <span>Tous droits réservés</span>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,48 @@
+<header class="masthead{{ if not .IsHome }} masthead-compact{{ end }}">
+    <div class="wrap">
+        <div class="mast-ropes" aria-hidden="true">
+            <span><i></i><i></i><i></i></span>
+            {{ partial "logo-mark.html" . }}
+            <span><i></i><i></i><i></i></span>
+        </div>
+        {{ if .IsHome }}<h1 class="wordmark"><a href="{{ "/" | relURL }}" aria-label="Le Coin du Ring, accueil">Le Coin <em>du Ring</em></a></h1>{{ else }}<p class="wordmark"><a href="{{ "/" | relURL }}" aria-label="Le Coin du Ring, accueil">Le Coin <em>du Ring</em></a></p>{{ end }}
+        <p class="mast-tagline"><span>La boxe, vue depuis le coin</span></p>
+        <div class="mast-strip">
+            <span>Média indépendant</span>
+            <time datetime="{{ now.Format "2006-01-02" }}">{{ time.Format ":date_full" now }}</time>
+            <span>Boxe <i></i> Sports de combat <i></i> Prépa physique</span>
+        </div>
+    </div>
+</header>
+
+<div class="navbar{{ if not .IsHome }} navbar-compact{{ end }}">
+    <div class="wrap navbar-inner">
+        <a href="{{ "/" | relURL }}" class="navbar-brand" aria-label="Le Coin du Ring, accueil">{{ partial "logo-mark.html" . }}<span class="navbar-wordmark">Le Coin <em>du Ring</em></span></a>
+        <nav class="main-nav" aria-label="Navigation principale">
+            {{ $current := .RelPermalink }}
+            {{ range site.Menus.main }}
+            <a href="{{ .URL | relURL }}"{{ if hasPrefix $current .URL }} class="is-active"{{ end }}>{{ .Name }}</a>
+            {{ end }}
+        </nav>
+        <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Navigation mobile">
+        {{ range site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        {{ end }}
+    </nav>
+</div>
+
+<script>
+(function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.getElementById('nav-mobile');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+})();
+</script>

@@ -1,0 +1,55 @@
+{{ define "main" }}
+{{ $corner := .Params.corner | default "rouge" }}
+{{ $isBlog := eq .Section "blog" }}
+<section class="page-hero page-hero-{{ $corner }}">
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d'Ariane">
+            <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span>
+            {{ if not $isBlog }}<a href="{{ "blog/" | relURL }}">Le blog</a><span aria-hidden="true">/</span>{{ end }}
+            <span aria-current="page">{{ .Title }}</span>
+        </nav>
+        <p class="page-corner">{{ if $isBlog }}Tous les articles{{ else if eq $corner "bleu" }}Coin bleu{{ else }}Coin rouge{{ end }}</p>
+        <h1>{{ .Title }}</h1>
+        <div class="page-hero-sub">
+            {{ with .Params.tagline }}<p class="deck">{{ . }}</p>{{ else }}{{ with .Description }}<p class="deck">{{ . }}</p>{{ end }}{{ end }}
+            {{ with .Params.chips }}<ul class="chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        </div>
+    </div>
+</section>
+
+<nav class="filters wrap" aria-label="Filtrer par rubrique">
+    <a href="{{ "blog/" | relURL }}" class="pill{{ if $isBlog }} is-active{{ end }}">Tout</a>
+    {{ range site.Menus.main }}
+    <a href="{{ .URL | relURL }}" class="pill{{ if eq $.RelPermalink .URL }} is-active{{ end }}">{{ .Name }}</a>
+    {{ end }}
+</nav>
+
+<section class="listing">
+    <div class="wrap">
+        {{ if .Pages }}
+            {{ $p := .Paginate (.Pages.ByDate.Reverse) }}
+            <div class="card-grid">
+                {{ range $i, $e := $p.Pages }}
+                    {{ $item := partial "page-item.html" . }}
+                    {{ partial "card.html" (dict "item" $item "featured" (and (eq $i 0) (eq $p.PageNumber 1))) }}
+                {{ end }}
+            </div>
+            {{ partial "pagination.html" . }}
+        {{ else }}
+            {{- /* Aucun article : aperçus de mise en page pour la rubrique (retirés dès qu'un vrai article existe) */ -}}
+            {{ $cat := cond $isBlog "" .Title }}
+            {{ $mocks := partial "items.html" (dict "cat" $cat "n" 6) }}
+            {{ if $mocks }}
+            <div class="empty-note"><span class="mock-flag">Aperçu de mise en page</span><p>Les premiers articles arrivent bientôt. Voici à quoi ressemblera la rubrique.</p></div>
+            <div class="card-grid">
+                {{ range $i, $e := $mocks }}
+                    {{ partial "card.html" (dict "item" . "featured" (eq $i 0)) }}
+                {{ end }}
+            </div>
+            {{ else }}
+            <p class="empty">Les premiers articles arrivent bientôt dans cette rubrique.</p>
+            {{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}

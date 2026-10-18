@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="error-page">
+    <div class="wrap">
+        <p class="error-code" aria-hidden="true">404</p>
+        <h1>K.O. technique : page introuvable</h1>
+        <p class="deck">La page demandée n'existe pas ou a changé d'adresse.</p>
+        <p class="error-links"><a href="{{ "/" | relURL }}" class="btn btn-red">Retour à l'accueil</a> <a href="{{ "blog/" | relURL }}" class="btn btn-ghost">Voir les articles</a></p>
+    </div>
+</section>
+{{ end }}

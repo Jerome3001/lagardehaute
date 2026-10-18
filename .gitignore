@@ -1,0 +1,18 @@
+public/
+resources/
+.hugo_build.lock
+.DS_Store
+
+# Fichiers internes de travail : ne jamais les publier (le dépôt GitHub Pages est public)
+.claude/
+CLAUDE.md
+README.md
+roadmap.yaml
+DEPLOIEMENT.md
+outils/
+
+# Brouillon de maquette de mise en page : n'est pas un article
+content/fr/blog/maquette-mise-en-page.md
+
+# Articles rédigés mais pas encore publiés : à garder hors du dépôt public
+reserve/

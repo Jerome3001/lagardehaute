@@ -1,0 +1,10 @@
+{{- if site.Params.noindex -}}
+# Site en conception : aucun robot n'est invité à explorer. Retirer params.noindex dans hugo.toml avant la mise en ligne.
+User-agent: *
+Disallow: /
+{{- else -}}
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- end }}

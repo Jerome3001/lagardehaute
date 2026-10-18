@@ -1,0 +1,23 @@
+{{- /* Renvoie une liste d'éléments pour la homepage et les listes. Paramètres : cat (vide = toutes les rubriques), n (nombre).
+     Les vrais articles passent d'abord ; tant qu'il en manque pour remplir la liste, on la complète avec les aperçus de data/apercu.yaml
+     (étiquetés « Aperçu », sans doublon de titre avec un vrai article). Supprimer data/apercu.yaml quand le site est assez fourni. */ -}}
+{{- $cat := .cat -}}
+{{- $n := .n -}}
+{{- $out := slice -}}
+{{- $titles := slice -}}
+{{- $posts := where site.RegularPages "Section" "blog" -}}
+{{- if $cat }}{{ $posts = where $posts "Params.categories" "intersect" (slice $cat) }}{{ end -}}
+{{- range first $n $posts.ByDate.Reverse -}}
+    {{- $out = $out | append (partial "page-item.html" .) -}}
+    {{- $titles = $titles | append .Title -}}
+{{- end -}}
+{{- if lt (len $out) $n -}}
+    {{- $mocks := hugo.Data.apercu -}}
+    {{- if $cat }}{{ $mocks = where $mocks "cat" $cat }}{{ end -}}
+    {{- range $mocks -}}
+        {{- if and (lt (len $out) $n) (not (in $titles .title)) -}}
+            {{- $out = $out | append (dict "title" .title "url" "#" "cat" .cat "desc" .desc "mock" true "date" "" "image" "" "imageAlt" "" "credit" "") -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+{{- return $out -}}

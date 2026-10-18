@@ -1,0 +1,118 @@
+{{ define "main" }}
+{{ $cat := "Actus" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
+{{ $catPage := partial "term-page.html" (printf "/categories/%s/" ($cat | urlize)) }}
+<article class="post">
+    <header class="post-head">
+        <div class="wrap">
+            <nav class="crumbs" aria-label="Fil d'Ariane">
+                <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span>
+                <a href="{{ "blog/" | relURL }}">Le blog</a><span aria-hidden="true">/</span>
+                {{ with $catPage }}<a href="{{ .RelPermalink }}">{{ $cat }}</a>{{ else }}<span>{{ $cat }}</span>{{ end }}
+            </nav>
+            <div class="post-head-grid">
+                <div class="post-head-text">
+                    <p class="post-meta">
+                        <a href="{{ with $catPage }}{{ .RelPermalink }}{{ else }}{{ "blog/" | relURL }}{{ end }}" class="card-cat cat-{{ urlize $cat }}">{{ $cat }}</a>
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time>
+                        <span>{{ .ReadingTime }} min de lecture</span>
+                    </p>
+                    <h1>{{ .Title }}</h1>
+                    {{ with .Description }}<p class="post-deck">{{ . }}</p>{{ end }}
+                    <p class="byline">Par {{ site.Params.author }}{{ if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}<span>Mis à jour le {{ time.Format ":date_long" .Lastmod }}</span>{{ end }}</p>
+                </div>
+                <figure class="post-cover">
+                    {{ with .Params.image }}<img src="{{ . | relURL }}" srcset="{{ replace . ".webp" "-640.webp" | relURL }} 640w, {{ replace . ".webp" "-800.webp" | relURL }} 800w, {{ . | relURL }} 1200w" sizes="(max-width: 960px) 100vw, 40vw" alt="{{ $.Params.imageAlt }}" width="1200" height="750" fetchpriority="high">{{ else }}{{ partial "cover.html" (dict "cat" $cat) }}{{ end }}
+                    {{ with .Params.imageCredit }}<figcaption>{{ . }}{{ with $.Params.imageSource }} <a href="{{ . }}" rel="noopener" target="_blank">Source</a>{{ end }}{{ with $.Params.imageLicenseUrl }} <a href="{{ . }}" rel="noopener license" target="_blank">Licence</a>{{ end }}</figcaption>{{ end }}
+                </figure>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <div class="post-layout{{ if .TableOfContents }} has-toc{{ end }}">
+            <div class="post-main">
+                <div class="prose">{{ .Content }}</div>
+
+                {{ with .Params.faq }}
+                <section class="faq" aria-labelledby="faq-title">
+                    <h2 id="faq-title">Questions fréquentes</h2>
+                    {{ range . }}
+                    <details>
+                        <summary>{{ .question }}</summary>
+                        <p>{{ .answer }}</p>
+                    </details>
+                    {{ end }}
+                </section>
+                {{ end }}
+
+                {{ with .Params.tags }}
+                <ul class="post-tags" aria-label="Mots-clés">
+                    {{ range . }}<li>#{{ . }}</li>{{ end }}
+                </ul>
+                {{ end }}
+
+                <aside class="author-box" aria-label="À propos de la rédaction">
+                    <p class="author-kicker"><span>La rédaction</span></p>
+                    <div class="author-row">
+                        <div class="author-seal" aria-hidden="true">{{ partial "logo-mark.html" . }}</div>
+                        <div class="author-text">
+                            <p class="author-name">{{ site.Params.author }}</p>
+                            <p class="author-note">Le Coin du Ring publie des analyses, des tests d'équipement et l'actualité de la boxe, avec une place pour les autres sports de combat et la préparation physique.</p>
+                            <ul class="author-links">
+                                <li><a href="{{ "a-propos/" | relURL }}">À propos</a></li>
+                                {{ with site.Params.contact_email }}<li><a href="mailto:{{ . }}">Nous écrire</a></li>{{ end }}
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            {{ if .TableOfContents }}
+            <aside class="post-aside">
+                <nav class="toc" aria-label="Sommaire">
+                    <p class="rule-title"><span>Sommaire</span></p>
+                    {{ .TableOfContents }}
+                </nav>
+            </aside>
+            {{ end }}
+        </div>
+
+        {{- /* Articles liés : même rubrique d'abord, puis les autres */ -}}
+        {{ $all := where (where site.RegularPages "Section" "blog") "Permalink" "ne" .Permalink }}
+        {{ $same := where $all "Params.categories" "intersect" .Params.categories }}
+        {{ $others := complement $same $all }}
+        {{ $related := first 3 ($same.ByDate.Reverse | append $others.ByDate.Reverse) }}
+        {{ if $related }}
+        <section class="related" aria-labelledby="related-title">
+            <h2 id="related-title" class="rule-title rule-title-lg"><span>Dans le coin</span></h2>
+            <div class="card-grid card-grid-flush">
+                {{ range $related }}{{ partial "card.html" (dict "item" (partial "page-item.html" .) "featured" false) }}{{ end }}
+            </div>
+        </section>
+        {{ end }}
+
+        {{ if or .PrevInSection .NextInSection }}
+        <nav class="post-nav" aria-label="Navigation entre articles">
+            {{ with .PrevInSection }}<a href="{{ .RelPermalink }}" class="post-nav-prev"><span>Article précédent</span>{{ .Title }}</a>{{ end }}
+            {{ with .NextInSection }}<a href="{{ .RelPermalink }}" class="post-nav-next"><span>Article suivant</span>{{ .Title }}</a>{{ end }}
+        </nav>
+        {{ else }}<div class="post-end"></div>{{ end }}
+    </div>
+</article>
+
+<script>
+(function () {
+    var links = document.querySelectorAll('.toc a');
+    if (!links.length || !('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            links.forEach(function (a) { a.classList.remove('is-active'); });
+            var l = document.querySelector('.toc a[href="#' + e.target.id + '"]');
+            if (l) l.classList.add('is-active');
+        });
+    }, { rootMargin: '-90px 0px -60% 0px' });
+    document.querySelectorAll('.prose h2, .prose h3').forEach(function (h) { if (h.id) obs.observe(h); });
+})();
+</script>
+{{ end }}

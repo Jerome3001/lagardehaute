@@ -1,0 +1,46 @@
+{{ define "main" }}
+<section class="page-hero page-hero-rouge">
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d'Ariane">
+            <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+        </nav>
+        <h1>{{ .Title }}</h1>
+        <div class="page-hero-sub"><p class="deck">Toutes les pages de {{ site.Title }}.</p></div>
+    </div>
+</section>
+<section class="listing">
+    <div class="wrap sitemap">
+        <section>
+            <h2 class="rule-title"><span>Pages principales</span></h2>
+            <ul>
+                <li><a href="{{ "/" | relURL }}">Accueil</a></li>
+                <li><a href="{{ "blog/" | relURL }}">Le blog</a></li>
+                <li><a href="{{ "a-propos/" | relURL }}">À propos</a></li>
+            </ul>
+        </section>
+        {{ range site.Menus.main }}
+        {{ $page := partial "term-page.html" .URL }}
+        <section>
+            <h2 class="rule-title"><span><a href="{{ .URL | relURL }}">{{ .Name }}</a></span></h2>
+            <ul>
+                {{ with $page }}
+                    {{ range .Pages.ByDate.Reverse }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a> <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ time.Format ":date_medium" .Lastmod }}</time></li>
+                    {{ else }}
+                    <li class="sitemap-empty">Premiers articles bientôt</li>
+                    {{ end }}
+                {{ end }}
+            </ul>
+        </section>
+        {{ end }}
+        <section>
+            <h2 class="rule-title"><span>Informations légales</span></h2>
+            <ul>
+                <li><a href="{{ "mentions-legales/" | relURL }}">Mentions légales</a></li>
+                <li><a href="{{ "politique-de-confidentialite/" | relURL }}">Politique de confidentialité</a></li>
+                <li><a href="{{ "cgu/" | relURL }}">Conditions générales d'utilisation</a></li>
+            </ul>
+        </section>
+    </div>
+</section>
+{{ end }}

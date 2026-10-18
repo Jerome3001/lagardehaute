@@ -1,0 +1,199 @@
+{{ define "main" }}
+{{ $all := partial "items.html" (dict "cat" "" "n" 5) }}
+{{ $analyses := partial "items.html" (dict "cat" "Analyses" "n" 2) }}
+{{ $actus := partial "items.html" (dict "cat" "Actus" "n" 2) }}
+{{ $mock := false }}{{ range $all }}{{ if .mock }}{{ $mock = true }}{{ end }}{{ end }}
+
+<!-- UNE : article principal + brèves -->
+<section class="front">
+    <div class="wrap front-grid">
+        {{ with index $all 0 }}
+        <article class="lead">
+            <a href="{{ .url }}" class="lead-link" aria-label="{{ .title }}">
+                {{ if .image }}
+                <div class="lead-art lead-art-photo" aria-hidden="true">
+                    <img src="{{ .image }}" srcset="{{ replace .image ".webp" "-800.webp" }} 800w, {{ .image }} 1200w" sizes="(max-width: 960px) 100vw, 66vw" alt="" width="1200" height="750" fetchpriority="high">
+                </div>
+                {{ else }}
+                <div class="lead-art" aria-hidden="true">
+                    <div class="lead-cone"></div>
+                    {{ partial "glove.html" . }}
+                    <span class="lead-word">{{ .cat }}</span>
+                </div>
+                {{ end }}
+                <div class="lead-text">
+                    <p class="lead-meta"><span class="tag tag-red">{{ .cat }}</span>{{ if .mock }}<span class="mock-flag">Aperçu</span>{{ end }}{{ if .date }}<time>{{ .date }}</time>{{ end }}</p>
+                    <h2>{{ .title }}</h2>
+                    <p class="deck">{{ .desc }}</p>
+                    {{ with .credit }}<p class="lead-credit">{{ . }}</p>{{ end }}
+                </div>
+            </a>
+        </article>
+        {{ end }}
+
+        <aside class="briefs" aria-labelledby="briefs-title">
+            <h2 id="briefs-title" class="rule-title"><span>Dans le coin</span></h2>
+            <ol>
+                {{ range $i, $e := after 1 $all }}
+                <li>
+                    <span class="brief-num" aria-hidden="true">{{ printf "%02d" (add $i 2) }}</span>
+                    <div>
+                        <p class="brief-cat">{{ .cat }}</p>
+                        <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+                    </div>
+                </li>
+                {{ end }}
+            </ol>
+            {{ if $mock }}<p class="mock-note">Aperçu de mise en page : titres fictifs.</p>{{ end }}
+        </aside>
+    </div>
+</section>
+
+<!-- BANDE ANALYSES -->
+<section class="band" id="analyses">
+    <div class="wrap band-grid">
+        {{ with partial "term-page.html" "/categories/analyses/" }}
+        <div class="band-rail">
+            <p class="band-index">01</p>
+            <h2>Analyses</h2>
+            <p class="deck">{{ .Params.tagline }}</p>
+            <ul class="chips">{{ range .Params.chips }}<li>{{ . }}</li>{{ end }}</ul>
+            <a href="{{ .RelPermalink }}" class="link-arrow">Toutes les analyses <b>→</b></a>
+        </div>
+        {{ end }}
+        <div class="band-body analyses-body">
+            <div class="faceoff" aria-hidden="true">
+                <p class="faceoff-title">Face à face</p>
+                <div class="faceoff-head"><b class="red">Coin rouge</b><b class="blue">Coin bleu</b></div>
+                <div class="faceoff-row"><span class="bar r" style="--v:78%"></span><em>Précision</em><span class="bar b" style="--v:56%"></span></div>
+                <div class="faceoff-row"><span class="bar r" style="--v:52%"></span><em>Puissance</em><span class="bar b" style="--v:84%"></span></div>
+                <div class="faceoff-row"><span class="bar r" style="--v:66%"></span><em>Endurance</em><span class="bar b" style="--v:60%"></span></div>
+                <div class="faceoff-row"><span class="bar r" style="--v:44%"></span><em>Défense</em><span class="bar b" style="--v:72%"></span></div>
+                <p class="faceoff-note">Illustration</p>
+            </div>
+            <div class="teasers">
+                {{ range first 2 (after 1 $analyses) }}
+                <article class="teaser">
+                    <p class="brief-cat">{{ .cat }}{{ if .mock }} <span class="mock-flag">Aperçu</span>{{ end }}</p>
+                    <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+                    <p class="deck">{{ .desc }}</p>
+                </article>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BANDE ÉQUIPEMENTS : le vestiaire -->
+<section class="band band-red" id="equipements">
+    <div class="wrap band-grid">
+        {{ with partial "term-page.html" "/categories/equipements/" }}
+        <div class="band-rail">
+            <p class="band-index">02</p>
+            <h2>Équipements</h2>
+            <p class="deck">{{ .Params.tagline }}</p>
+            <a href="{{ .RelPermalink }}" class="link-arrow">Tout le vestiaire <b>→</b></a>
+        </div>
+        {{ end }}
+        <div class="band-body">
+            <ul class="locker">
+                <li>
+                    <svg viewBox="0 0 64 64" aria-hidden="true"><g stroke="#0C0C0E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><rect x="20" y="46" width="24" height="12" rx="2" fill="#F3ECDD"/><path d="M14 30c0-12 8-20 18-20s16 8 14 22c-1 7-3 11-5 14H21c-4-4-7-9-7-16Z" fill="#A23B2E"/><path d="M12 32c-5-1-7 5-4 9 3 4 9 4 12 1-2-4-4-7-8-10Z" fill="#74281F"/></g></svg>
+                    <h3>Gants</h3><p>Sparring, sac, compétition</p>
+                </li>
+                <li>
+                    <svg viewBox="0 0 64 64" aria-hidden="true"><g stroke="#0C0C0E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><circle cx="30" cy="30" r="20" fill="#F3ECDD"/><circle cx="30" cy="30" r="8" fill="#0C0C0E"/><circle cx="30" cy="30" r="14" fill="none" stroke-width="2"/><path d="M46 42c8 4 12 8 11 16" fill="none"/></g></svg>
+                    <h3>Bandes</h3><p>Longueur, matière, pose</p>
+                </li>
+                <li>
+                    <svg viewBox="0 0 64 64" aria-hidden="true"><g stroke="#0C0C0E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M32 6l22 7v18c0 14-9 23-22 27C19 54 10 45 10 31V13z" fill="#F3ECDD"/><path d="M32 6v52" fill="none"/><path d="M10 28h44" fill="none"/></g></svg>
+                    <h3>Protections</h3><p>Tête, dents, coquille, tibias</p>
+                </li>
+                <li>
+                    <svg viewBox="0 0 64 64" aria-hidden="true"><g stroke="#0C0C0E" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"><path d="M24 14 32 4l8 10" fill="none"/><rect x="20" y="14" width="24" height="46" rx="8" fill="#F3ECDD"/><rect x="20" y="26" width="24" height="8" fill="#0C0C0E"/></g></svg>
+                    <h3>Sacs</h3><p>Poids, hauteur, fixation</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- BANDE ACTUS : le tableau d'affichage -->
+<section class="band" id="actus">
+    <div class="wrap band-grid">
+        {{ with partial "term-page.html" "/categories/actus/" }}
+        <div class="band-rail">
+            <p class="band-index">03</p>
+            <h2>Actus</h2>
+            <p class="deck">{{ .Params.tagline }}</p>
+            <ul class="chips">{{ range .Params.chips }}<li>{{ . }}</li>{{ end }}</ul>
+            <a href="{{ .RelPermalink }}" class="link-arrow">Toute l'actu <b>→</b></a>
+        </div>
+        {{ end }}
+        <div class="band-body">
+            <div class="board">
+                <p class="board-head"><span>Tableau d'affichage</span></p>
+                <ul>
+                    {{ range $i, $e := $actus }}
+                    <li>
+                        <span class="board-no">{{ printf "%02d" (add $i 1) }}</span>
+                        <a href="{{ .url }}">{{ .title }}{{ if .mock }} <span class="mock-flag">Aperçu</span>{{ end }}</a>
+                        <span class="board-go" aria-hidden="true">→</span>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- L'AUTRE COIN -->
+<section class="split" id="autre-coin">
+    <div class="split-panel split-blue">
+        <div class="split-inner">
+            {{ with partial "term-page.html" "/categories/sports-de-combat/" }}
+            <p class="band-index">04</p>
+            <h2>Sports de combat</h2>
+            <p>{{ .Params.tagline }}</p>
+            <ul class="chips chips-light">{{ range .Params.chips }}<li>{{ . }}</li>{{ end }}</ul>
+            <a href="{{ .RelPermalink }}" class="link-arrow">Explorer <b>→</b></a>
+            {{ end }}
+        </div>
+    </div>
+    <div class="split-panel split-ink">
+        <div class="split-inner">
+            {{ with partial "term-page.html" "/categories/prepa-physique/" }}
+            <p class="band-index">05</p>
+            <h2>Prépa physique</h2>
+            <p>{{ .Params.tagline }}</p>
+            <ul class="chips chips-light">{{ range .Params.chips }}<li>{{ . }}</li>{{ end }}</ul>
+            <a href="{{ .RelPermalink }}" class="link-arrow">Explorer <b>→</b></a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- POUR DÉBUTER : trois reprises sur une corde -->
+<section class="rounds">
+    <div class="wrap">
+        <h2 class="rule-title rule-title-lg"><span>Pour débuter, trois reprises</span></h2>
+        <ol class="rounds-line">
+            <li>
+                <span class="node">1</span>
+                <h3>Choisis ton équipement</h3>
+                <p>Gants, bandes, protections : ce qu'il faut pour s'entraîner sans se blesser, et ce qui peut attendre.</p>
+            </li>
+            <li>
+                <span class="node">2</span>
+                <h3>Comprends ce que tu regardes</h3>
+                <p>Garde, distance, jeu de jambes : les repères pour lire un combat au lieu de simplement le subir.</p>
+            </li>
+            <li>
+                <span class="node">3</span>
+                <h3>Prépare ton corps</h3>
+                <p>Cardio, force, mobilité : la préparation qui permet de tenir les reprises et d'encaisser la charge.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+{{ end }}

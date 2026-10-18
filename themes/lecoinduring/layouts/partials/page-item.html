@@ -1,0 +1,4 @@
+{{- /* Transforme une page Hugo en élément d'affichage (même forme que les aperçus de data/apercu.yaml). */ -}}
+{{- $c := "Actus" -}}{{- with .Params.categories }}{{ $c = index . 0 }}{{ end -}}
+{{- $img := "" -}}{{- with .Params.image }}{{ $img = . | relURL }}{{ end -}}
+{{- return (dict "title" .Title "url" .RelPermalink "cat" $c "desc" .Description "mock" false "date" (time.Format ":date_medium" .Date) "image" $img "imageAlt" (.Params.imageAlt | default "") "credit" (.Params.imageCredit | default "")) -}}

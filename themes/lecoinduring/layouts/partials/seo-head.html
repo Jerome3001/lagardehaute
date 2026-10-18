@@ -1,0 +1,86 @@
+{{- $isArticle := and .IsPage (eq .Section "blog") -}}
+{{- $desc := .Description | default site.Params.description -}}
+{{- $orgID := printf "%s#organization" site.BaseURL -}}
+{{- $locale := site.Language.Locale | default "fr-FR" -}}
+{{- $image := "" -}}
+{{- with .Params.image }}{{ $image = strings.TrimPrefix "/" . | absURL }}{{ else }}{{ with site.Params.default_og_image }}{{ $image = strings.TrimPrefix "/" . | absURL }}{{ end }}{{ end -}}
+
+<meta name="description" content="{{ $desc }}">
+<!-- Robots : le site entier (params.noindex) ou une page (noindex dans le front matter) -->
+{{ if or site.Params.noindex .Params.noindex (eq .Kind "404") }}<meta name="robots" content="noindex, nofollow">{{ else }}<meta name="robots" content="index, follow, max-image-preview:large">{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon-32.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">{{ end }}
+{{ if $isArticle }}<meta name="author" content="{{ site.Params.author }}">{{ end }}
+<meta name="theme-color" content="#F6F1E4">
+
+<!-- Open Graph -->
+<meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="{{ replace $locale "-" "_" }}">
+{{ with $image }}<meta property="og:image" content="{{ . }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+{{ with $image }}<meta name="twitter:image" content="{{ . }}">{{ end }}
+
+{{ if $isArticle }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+{{ range .Params.categories }}<meta property="article:section" content="{{ . }}">
+{{ end }}{{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">
+{{ end }}
+{{ end }}
+
+<!-- JSON-LD : Organization (toutes les pages) -->
+{{- $org := dict "@context" "https://schema.org" "@type" "Organization" "@id" $orgID "name" site.Title "url" site.BaseURL "description" site.Params.description -}}
+{{- with site.Params.logo }}{{ $org = merge $org (dict "logo" (dict "@type" "ImageObject" "url" (strings.TrimPrefix "/" . | absURL) "width" 512 "height" 512)) }}{{ end -}}
+{{- with site.Params.founding_year }}{{ $org = merge $org (dict "foundingDate" .) }}{{ end -}}
+{{- with site.Params.expertise }}{{ $org = merge $org (dict "knowsAbout" .) }}{{ end -}}
+{{- with site.Params.contact_email }}{{ $org = merge $org (dict "email" .) }}{{ end }}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+
+{{ if .IsHome }}
+<!-- JSON-LD : WebSite -->
+{{- $web := dict "@context" "https://schema.org" "@type" "WebSite" "@id" (printf "%s#website" site.BaseURL) "name" site.Title "description" site.Params.description "url" site.BaseURL "inLanguage" $locale "publisher" (dict "@id" $orgID) -}}
+<script type="application/ld+json">{{ $web | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ if $isArticle }}
+<!-- JSON-LD : Article -->
+{{- $author := dict "@type" "Organization" "name" site.Params.author "@id" $orgID -}}
+{{- $article := dict "@context" "https://schema.org" "@type" "Article" "headline" .Title "description" $desc "datePublished" (.Date.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02") "wordCount" .WordCount "inLanguage" $locale "author" $author "publisher" (dict "@id" $orgID) "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink) -}}
+{{- with $image }}{{ $article = merge $article (dict "image" .) }}{{ end -}}
+{{- with .Params.categories }}{{ $article = merge $article (dict "articleSection" (index . 0)) }}{{ end -}}
+{{- with .Params.tags }}{{ $article = merge $article (dict "keywords" (delimit . ", ")) }}{{ end }}
+<script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+
+{{ with .Params.faq }}
+<!-- JSON-LD : FAQPage -->
+{{- $qs := slice -}}
+{{- range . }}{{ $qs = $qs | append (dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) }}{{ end -}}
+{{- $faq := dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $qs }}
+<script type="application/ld+json">{{ $faq | jsonify | safeJS }}</script>
+{{ end }}
+{{ end }}
+
+{{ if and (not .IsHome) (ne .Kind "404") }}
+<!-- JSON-LD : BreadcrumbList -->
+{{- $items := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" site.BaseURL) -}}
+{{- $pos := 2 -}}
+{{- if or $isArticle (eq .Kind "term") }}{{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" "Le blog" "item" ("blog/" | absURL)) }}{{ $pos = add $pos 1 }}{{ end -}}
+{{- if $isArticle }}{{ with .Params.categories }}{{ $c := index . 0 }}{{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" $c "item" (printf "categories/%s/" ($c | urlize) | absURL)) }}{{ $pos = add $pos 1 }}{{ end }}{{ end -}}
+{{- $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) -}}
+{{- $crumbs := dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $items }}
+<script type="application/ld+json">{{ $crumbs | jsonify | safeJS }}</script>
+{{ end }}

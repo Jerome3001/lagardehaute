@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="page-hero page-hero-rouge">
+    <div class="wrap">
+        <nav class="crumbs" aria-label="Fil d'Ariane">
+            <a href="{{ "/" | relURL }}">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+        </nav>
+        <p class="page-corner">Toutes les rubriques</p>
+        <h1>{{ .Title }}</h1>
+    </div>
+</section>
+<section class="listing">
+    <div class="wrap">
+        <ul class="plain-list">
+            {{ range .Data.Terms.Alphabetical }}<li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> <span class="count">{{ .Count }}</span></li>{{ end }}
+        </ul>
+    </div>
+</section>
+{{ end }}

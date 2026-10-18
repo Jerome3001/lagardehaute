@@ -1,0 +1,79 @@
+baseURL = "https://lecoinduring.fr/"
+title = "Le Coin du Ring"
+theme = "lecoinduring"
+
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+
+enableRobotsTXT = true
+removePathAccents = true
+
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["html", "rss", "llms"]
+
+[pagination]
+  pagerSize = 12
+
+[languages]
+  [languages.fr]
+    locale = "fr-FR"
+    label = "Français"
+    weight = 1
+    title = "Le Coin du Ring"
+    contentDir = "content/fr"
+    [languages.fr.params]
+      description = "Le média de la boxe : analyses, équipements et actualités. Et aussi les autres sports de combat et la préparation physique."
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[[languages.fr.menus.main]]
+  name = "Analyses"
+  url = "/categories/analyses/"
+  weight = 1
+[[languages.fr.menus.main]]
+  name = "Équipements"
+  url = "/categories/equipements/"
+  weight = 2
+[[languages.fr.menus.main]]
+  name = "Actus"
+  url = "/categories/actus/"
+  weight = 3
+[[languages.fr.menus.main]]
+  name = "Sports de combat"
+  url = "/categories/sports-de-combat/"
+  weight = 4
+[[languages.fr.menus.main]]
+  name = "Prépa physique"
+  url = "/categories/prepa-physique/"
+  weight = 5
+
+[params]
+  author = "La rédaction du Coin du Ring"
+  founding_year = "2026"
+  logo = "/logo-512.png"
+  default_og_image = "/images/og-default.png"
+  expertise = ["Boxe", "Sports de combat", "Préparation physique"]
+  # Site en cours de conception : retirer noindex avant la mise en ligne
+  noindex = true
+
+  # Alimente les mentions légales, la politique de confidentialité et la page À propos (shortcodes contact et hebergeur)
+  contact_email = "contact@lecoinduring.fr"
+  [params.hebergeur]
+    nom = "GitHub, Inc."
+    service = "GitHub Pages"
+    adresse = "88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis"
+    site = "https://github.com"
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = true

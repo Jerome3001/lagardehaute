@@ -1,0 +1,12 @@
+{{- /* Carte d'article. Paramètres : item (élément d'affichage), featured (bool). */ -}}
+{{- $i := .item -}}
+<article class="card{{ if .featured }} card-featured{{ end }}">
+    <a href="{{ $i.url }}" class="card-cover" tabindex="-1" aria-hidden="true">
+        {{- if $i.image }}<img src="{{ $i.image }}" srcset="{{ replace $i.image ".webp" "-640.webp" }} 640w, {{ replace $i.image ".webp" "-800.webp" }} 800w, {{ $i.image }} 1200w" sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 33vw" alt="{{ $i.imageAlt }}" width="1200" height="750" loading="lazy">{{ else }}{{ partial "cover.html" $i }}{{ end -}}
+    </a>
+    <div class="card-body">
+        <p class="card-meta"><span class="card-cat cat-{{ urlize $i.cat }}">{{ $i.cat }}</span>{{ if $i.mock }}<span class="mock-flag">Aperçu</span>{{ end }}{{ if $i.date }}<time>{{ $i.date }}</time>{{ end }}</p>
+        <h3><a href="{{ $i.url }}">{{ $i.title }}</a></h3>
+        {{ if $i.desc }}<p class="deck">{{ $i.desc }}</p>{{ end }}
+    </div>
+</article>

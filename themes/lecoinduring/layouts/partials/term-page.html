@@ -1,0 +1,5 @@
+{{- /* Renvoie la page d'une rubrique à partir de son URL (ex. "/categories/equipements/"), ou false.
+     Évite site.GetPage, qui ne retrouve pas les rubriques à accent (Équipements, Prépa physique). */ -}}
+{{- $found := false -}}
+{{- range where site.Pages "RelPermalink" . -}}{{- if eq .Kind "term" }}{{ $found = . }}{{ end -}}{{- end -}}
+{{- return $found -}}
