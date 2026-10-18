@@ -61,8 +61,8 @@ removePathAccents = true
   logo = "/logo-512.png"
   default_og_image = "/images/og-default.png"
   expertise = ["Boxe", "Sports de combat", "Préparation physique"]
-  # Site en cours de conception : retirer noindex avant la mise en ligne
-  noindex = true
+  # Référencement ouvert le 2026-10-18 (domaine branché, boîte contact active). Repasser à true pour fermer le site aux moteurs.
+  noindex = false
 
   # Alimente les mentions légales, la politique de confidentialité et la page À propos (shortcodes contact et hebergeur)
   contact_email = "contact@lecoinduring.fr"
