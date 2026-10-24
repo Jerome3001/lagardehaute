@@ -8,7 +8,7 @@
             {{ if not $isBlog }}<a href="{{ "blog/" | relURL }}">Le blog</a><span aria-hidden="true">/</span>{{ end }}
             <span aria-current="page">{{ .Title }}</span>
         </nav>
-        <p class="page-corner">{{ if $isBlog }}Tous les articles{{ else if eq $corner "bleu" }}Coin bleu{{ else }}Coin rouge{{ end }}</p>
+        <p class="page-corner">{{ if $isBlog }}Tous les articles{{ else if eq $corner "bleu" }}Autour de la boxe{{ else }}La boxe{{ end }}</p>
         <h1>{{ .Title }}</h1>
         <div class="page-hero-sub">
             {{ with .Params.tagline }}<p class="deck">{{ . }}</p>{{ else }}{{ with .Description }}<p class="deck">{{ . }}</p>{{ end }}{{ end }}

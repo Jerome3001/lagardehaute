@@ -1,6 +1,6 @@
 /* ========================================
    La Garde Haute - variante B "une de journal sportif"
-   Papier crème, encre noire, filets épais, rouge gant et bleu de l'autre coin.
+   Papier crème, encre noire, filets épais, rouge gant et bleu encre.
    Structure magazine : masthead, une + brèves, bandes par rubrique, split, reprises.
    ======================================== */
 
@@ -73,7 +73,7 @@ section[id] { scroll-margin-top: 64px; }
 .mast-ropes { display: flex; align-items: center; gap: 22px; margin-bottom: 14px; }
 .mast-ropes span { flex: 1; display: grid; gap: 5px; }
 .mast-ropes i { display: block; height: 5px; border-radius: 99px; background: linear-gradient(180deg, #C9786A, var(--rouge) 45%, var(--rouge-sombre)); }
-.mast-ropes .logo-mark { width: 46px; height: 46px; flex: none; }
+.mast-ropes .logo-mark { width: 76px; height: 76px; flex: none; }
 .logo-mark { display: block; }
 .wordmark { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(3.4rem, 12.5vw, 11rem); line-height: .86; letter-spacing: .005em; }
 .wordmark em { font-style: normal; color: var(--rouge); }
@@ -112,7 +112,8 @@ section[id] { scroll-margin-top: 64px; }
 .lead-word { position: absolute; left: 24px; bottom: 6px; font-family: var(--font-display); font-size: clamp(3rem, 8vw, 7rem); line-height: 1; text-transform: uppercase; color: transparent; -webkit-text-stroke: 2px rgba(255, 255, 255, .8); }
 .lead-text { padding-top: 22px; display: grid; gap: 14px; }
 .lead-meta { display: flex; align-items: center; gap: 12px; font-family: var(--font-cond); font-weight: 600; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gris); }
-.lead-text h2 { font-size: clamp(2.2rem, 4.6vw, 3.8rem); transition: color var(--ease); }
+.lead-text h2 { font-size: clamp(2.2rem, 3.2vw, 2.7rem); transition: color var(--ease); }
+@media (min-width: 1200px) { .lead-art { aspect-ratio: 21 / 9; } }
 .lead-link:hover h2 { color: var(--rouge); }
 
 .briefs .rule-title { margin-bottom: 8px; }
@@ -130,6 +131,7 @@ section[id] { scroll-margin-top: 64px; }
 .band-red { background: var(--rouge); color: #fff; border-top-color: var(--noir); }
 .band-red::before { background: var(--noir); }
 .band-grid { display: grid; grid-template-columns: 4fr 8fr; gap: 56px; align-items: start; }
+.band-grid > .band-body { align-self: center; }
 .band-rail { display: grid; gap: 18px; position: sticky; top: 90px; }
 .band-index { font-family: var(--font-cond); font-weight: 700; font-size: .95rem; letter-spacing: .2em; color: var(--rouge); }
 .band-index::before { content: "Rubrique "; }
@@ -175,7 +177,7 @@ section[id] { scroll-margin-top: 64px; }
 .board-go { color: var(--gris-clair); transition: transform var(--ease); }
 .board li:hover .board-go { transform: translateX(6px); color: #fff; }
 
-/* ---------- L'autre coin ---------- */
+/* ---------- Autour de la boxe ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; border-top: 8px solid var(--encre); }
 .split-panel { position: relative; padding: 84px 0; color: #fff; }
 .split-blue { background: var(--bleu); }
@@ -197,7 +199,7 @@ section[id] { scroll-margin-top: 64px; }
 .rounds-line::before { content: ""; position: absolute; left: 0; right: 0; top: 23px; height: 14px; border-radius: 99px; background: linear-gradient(180deg, #C9786A, var(--rouge) 45%, var(--rouge-sombre)); box-shadow: 0 6px 10px rgba(0, 0, 0, .25); }
 .rounds-line li { position: relative; display: grid; gap: 10px; align-content: start; }
 .node { position: relative; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--noir); color: #fff; border: 4px solid var(--papier); box-shadow: 0 0 0 3px var(--noir); font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 14px; }
-.rounds-line h3 { font-size: 1.9rem; max-width: 14ch; }
+.rounds-line h3 { font-size: 1.9rem; max-width: 14ch; line-height: 1.05; }
 .rounds-line p { color: var(--gris); max-width: 24rem; }
 
 /* ---------- Pages internes : en-tête, filtres, cartes ---------- */
@@ -353,13 +355,9 @@ section[id] { scroll-margin-top: 64px; }
 
 /* ---------- Footer : pied de journal ---------- */
 .site-footer { margin-top: auto; border-top: 8px solid var(--encre); box-shadow: 0 -5px 0 var(--papier), 0 -7px 0 var(--encre); position: relative; }
-.foot-mast { text-align: center; padding: 56px 0 36px; }
-.foot-ropes { display: grid; gap: 5px; margin-bottom: 22px; }
-.foot-ropes i { display: block; height: 5px; border-radius: 99px; background: linear-gradient(180deg, #C9786A, var(--rouge) 45%, var(--rouge-sombre)); }
-.foot-wordmark { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(2.8rem, 8vw, 6.4rem); line-height: .95; }
-.foot-wordmark em { font-style: normal; color: var(--rouge); }
-.foot-tagline { margin-top: 14px; display: flex; align-items: center; gap: 18px; font-family: var(--font-cond); font-weight: 700; font-size: .9rem; letter-spacing: .3em; text-transform: uppercase; }
-.foot-tagline::before, .foot-tagline::after { content: ""; flex: 1; height: 1.5px; background: var(--encre); }
+.foot-mast { padding: 44px 0 40px; }
+.foot-mast .mast-ropes { margin-bottom: 0; }
+.foot-mast .logo-mark { width: 64px; height: 64px; }
 
 .foot-cols { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 3px solid var(--encre); border-bottom: 1.5px solid var(--encre); margin-bottom: 44px; }
 .foot-col { padding: 26px 28px 30px; border-left: 1.5px solid var(--encre); }
@@ -406,7 +404,8 @@ section[id] { scroll-margin-top: 64px; }
     .wrap { width: calc(100% - 32px); }
     .masthead { padding-top: 24px; }
     .mast-tagline { letter-spacing: .16em; font-size: .85rem; gap: 12px; }
-    .foot-tagline { letter-spacing: .16em; font-size: .8rem; gap: 12px; }
+    .mast-ropes .logo-mark { width: 60px; height: 60px; }
+    .foot-mast .logo-mark { width: 52px; height: 52px; }
     .locker { grid-template-columns: 1fr 1fr; }
     .board li { grid-template-columns: 34px 1fr auto; }
     .board li a { font-size: 1.1rem; }
@@ -455,7 +454,7 @@ section[id] { scroll-margin-top: 64px; }
 .mast-strip { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; margin-top: 18px; padding: 8px 0; border-top: 3px solid var(--encre); border-bottom: 1px solid var(--encre); font-family: var(--font-cond); font-weight: 600; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; }
 .mast-strip time { font-weight: 700; }
 .mast-strip i { display: inline-block; width: 6px; height: 6px; margin: 0 8px 1px; background: var(--rouge); transform: rotate(45deg); }
-.mast-strip span:first-child { flex: 1; }
+.mast-strip span:first-child { flex: 1; text-align: left; }
 .mast-strip span:last-child { flex: 1; text-align: right; }
 .masthead { padding-bottom: 0; }
 .navbar { border-top: 0; box-shadow: 0 2px 0 var(--papier), 0 4px 0 var(--encre); margin-bottom: 4px; }
@@ -585,7 +584,7 @@ section[id] { scroll-margin-top: 64px; }
 .author-kicker span::before { left: 0; }
 .author-kicker span::after { right: 0; }
 .author-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px; align-items: start; }
-.author-seal .logo-mark { width: 64px; height: 64px; border-radius: 50%; outline: 2px solid var(--encre); outline-offset: 4px; }
+.author-seal .logo-mark { width: 64px; height: 64px; }
 .author-name { font-family: var(--font-display); text-transform: uppercase; font-size: 1.7rem; line-height: 1.05; margin-bottom: 8px; }
 .author-note { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; line-height: 1.55; color: var(--gris); }
 .author-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(14, 14, 16, .25); }

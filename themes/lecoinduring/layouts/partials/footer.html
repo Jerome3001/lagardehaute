@@ -1,20 +1,22 @@
 <footer class="site-footer">
     <div class="wrap">
         <div class="foot-mast">
-            <div class="foot-ropes" aria-hidden="true"><i></i><i></i><i></i></div>
-            <p class="foot-wordmark">La Garde <em>Haute</em></p>
-            <p class="foot-tagline">La boxe, sans baisser la garde</p>
+            <div class="mast-ropes" aria-hidden="true">
+                <span><i></i><i></i><i></i></span>
+                {{ partial "logo-mark.html" . }}
+                <span><i></i><i></i><i></i></span>
+            </div>
         </div>
 
         <div class="foot-cols">
-            <nav class="foot-col" aria-label="Coin rouge">
-                <h2>Coin rouge</h2>
+            <nav class="foot-col" aria-label="La boxe">
+                <h2>La boxe</h2>
                 <ul class="index">
                     {{ range $i, $e := first 3 site.Menus.main }}<li><a href="{{ .URL | relURL }}"><span>{{ .Name }}</span><i></i><b>{{ printf "%02d" (add $i 1) }}</b></a></li>{{ end }}
                 </ul>
             </nav>
-            <nav class="foot-col" aria-label="Coin bleu">
-                <h2 class="blue">Coin bleu</h2>
+            <nav class="foot-col" aria-label="Autour de la boxe">
+                <h2 class="blue">Autour de la boxe</h2>
                 <ul class="index">
                     {{ range $i, $e := after 3 site.Menus.main }}<li><a href="{{ .URL | relURL }}"><span>{{ .Name }}</span><i></i><b>{{ printf "%02d" (add $i 4) }}</b></a></li>{{ end }}
                 </ul>

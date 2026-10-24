@@ -3,7 +3,7 @@ title: "À propos"
 description: "La Garde Haute est un média francophone sur la boxe : analyses, équipements et actus, avec une place pour les autres sports de combat et la préparation physique."
 ---
 
-La Garde Haute est un média francophone consacré à la **boxe**. Il est organisé comme un ring : le coin rouge pour la boxe elle-même, le coin bleu pour tout ce qui l'entoure, c'est-à-dire les autres sports de combat et la préparation physique.
+La Garde Haute est un média francophone consacré à la **boxe**. Il fait aussi une place aux autres sports de combat et à la préparation physique.
 
 ## Ce qu'on y trouve
 
