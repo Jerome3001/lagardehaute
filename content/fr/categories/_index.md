@@ -1,6 +1,6 @@
 ---
 title: "Rubriques"
-description: "Toutes les rubriques du Coin du Ring."
+description: "Toutes les rubriques de La Garde Haute."
 noindex: true
 sitemap:
   disable: true

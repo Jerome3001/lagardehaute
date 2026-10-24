@@ -1,6 +1,6 @@
 ---
 title: "Politique de confidentialité"
-description: "Politique de confidentialité du Coin du Ring : données collectées, finalités, durées de conservation, cookies et droits RGPD."
+description: "Politique de confidentialité de La Garde Haute : données collectées, finalités, durées de conservation, cookies et droits RGPD."
 slug: "politique-de-confidentialite"
 noindex: true
 sitemap:
@@ -10,11 +10,11 @@ lastmod: 2026-10-17
 ---
 ## Responsable du traitement
 
-Le responsable du traitement des données collectées sur Le Coin du Ring est l'éditeur du site, joignable à l'adresse {{< contact >}}. Toute question relative à la protection des données peut lui être adressée directement.
+Le responsable du traitement des données collectées sur La Garde Haute est l'éditeur du site, joignable à l'adresse {{< contact >}}. Toute question relative à la protection des données peut lui être adressée directement.
 
 ## Principe de collecte minimale
 
-Le Coin du Ring ne recueille que les données strictement nécessaires au fonctionnement du site et au traitement des demandes reçues. Aucune donnée n'est vendue, louée ni cédée à des tiers à des fins commerciales.
+La Garde Haute ne recueille que les données strictement nécessaires au fonctionnement du site et au traitement des demandes reçues. Aucune donnée n'est vendue, louée ni cédée à des tiers à des fins commerciales.
 
 ## Données collectées
 

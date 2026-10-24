@@ -1,10 +1,10 @@
-# Déploiement du Coin du Ring sur GitHub Pages.
+# Déploiement de La Garde Haute sur GitHub Pages.
 # Se déclenche à chaque envoi sur la branche main, ou à la main depuis l'onglet Actions.
 # Prérequis dans le dépôt : Settings > Pages > Source = « GitHub Actions ».
 # L'adresse du site (baseURL) est lue dans les réglages de Pages : adresse github.io tant qu'aucun domaine n'est branché,
 # puis le domaine personnalisé dès qu'il est saisi dans Settings > Pages. Rien à modifier dans ce fichier au moment du branchement.
 
-name: Déployer Le Coin du Ring sur GitHub Pages
+name: Déployer La Garde Haute sur GitHub Pages
 
 on:
   push:
@@ -96,7 +96,7 @@ jobs:
       - name: Notifier IndexNow
         continue-on-error: true
         env:
-          SITE_URL: "https://lecoinduring.fr/"
+          SITE_URL: "https://lagardehaute.fr/"
           INDEXNOW_KEY: "5ce091fa9025da76abc6d669c046b0b5"
           INDEXNOW_MODE: ${{ inputs.indexnow_all && 'all' || 'recent' }}
         run: python3 .github/scripts/indexnow.py

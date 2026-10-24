@@ -1,9 +1,9 @@
 ---
 title: "À propos"
-description: "Le Coin du Ring est un média francophone sur la boxe : analyses, équipements et actus, avec une place pour les autres sports de combat et la préparation physique."
+description: "La Garde Haute est un média francophone sur la boxe : analyses, équipements et actus, avec une place pour les autres sports de combat et la préparation physique."
 ---
 
-Le Coin du Ring est un média francophone consacré à la **boxe**. Il est organisé comme un ring : le coin rouge pour la boxe elle-même, le coin bleu pour tout ce qui l'entoure, c'est-à-dire les autres sports de combat et la préparation physique.
+La Garde Haute est un média francophone consacré à la **boxe**. Il est organisé comme un ring : le coin rouge pour la boxe elle-même, le coin bleu pour tout ce qui l'entoure, c'est-à-dire les autres sports de combat et la préparation physique.
 
 ## Ce qu'on y trouve
 
@@ -14,11 +14,11 @@ Le Coin du Ring est un média francophone consacré à la **boxe**. Il est organ
 
 ## Indépendance
 
-Le Coin du Ring ne contient actuellement ni lien affilié ni contenu sponsorisé.
+La Garde Haute ne contient actuellement ni lien affilié ni contenu sponsorisé.
 
 ## Marques citées
 
-Les marques, organisations et noms de produits cités dans les contenus appartiennent à leurs détenteurs respectifs. Le Coin du Ring est un site indépendant, non affilié à ces sociétés. Le détail figure dans les [mentions légales]({{< relref "mentions-legales" >}}).
+Les marques, organisations et noms de produits cités dans les contenus appartiennent à leurs détenteurs respectifs. La Garde Haute est un site indépendant, non affilié à ces sociétés. Le détail figure dans les [mentions légales]({{< relref "mentions-legales" >}}).
 
 ## Sport et santé
 

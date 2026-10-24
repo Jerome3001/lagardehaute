@@ -1,6 +1,6 @@
 ---
 title: "Mots-clés"
-description: "Tous les mots-clés du Coin du Ring."
+description: "Tous les mots-clés de La Garde Haute."
 noindex: true
 sitemap:
   disable: true

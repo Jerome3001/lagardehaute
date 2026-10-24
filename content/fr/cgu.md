@@ -1,6 +1,6 @@
 ---
 title: "Conditions générales d'utilisation"
-description: "Conditions générales d'utilisation du Coin du Ring : accès au site, portée des contenus, responsabilité, propriété intellectuelle."
+description: "Conditions générales d'utilisation de La Garde Haute : accès au site, portée des contenus, responsabilité, propriété intellectuelle."
 slug: "cgu"
 noindex: true
 sitemap:
@@ -10,7 +10,7 @@ lastmod: 2026-10-17
 ---
 ## Objet
 
-Les présentes conditions générales d'utilisation définissent les modalités d'accès et d'utilisation du site Le Coin du Ring.
+Les présentes conditions générales d'utilisation définissent les modalités d'accès et d'utilisation du site La Garde Haute.
 
 ## Acceptation
 
@@ -24,7 +24,7 @@ L'éditeur s'efforce de maintenir le site accessible en permanence, sans que cel
 
 ## Nature et portée des contenus
 
-Les contenus publiés sur Le Coin du Ring ont une finalité d'information générale. Ils sont rédigés avec soin, à partir de sources que l'éditeur estime fiables, et actualisés selon les moyens disponibles.
+Les contenus publiés sur La Garde Haute ont une finalité d'information générale. Ils sont rédigés avec soin, à partir de sources que l'éditeur estime fiables, et actualisés selon les moyens disponibles.
 
 Ils ne constituent pas un conseil personnalisé et ne remplacent pas l'avis d'un professionnel qualifié. Les informations relatives à des produits, des services, des tarifs, des disponibilités, des dates ou des affiches de combats sont données à titre indicatif et peuvent évoluer indépendamment de la volonté de l'éditeur. Il est recommandé de les vérifier auprès de la source concernée avant toute décision.
 
@@ -52,7 +52,7 @@ L'ensemble des éléments composant le site est protégé par le droit de la pro
 
 Le site propose des liens vers des ressources externes, à titre documentaire. L'éditeur n'exerce aucun contrôle sur leur contenu, leurs conditions d'utilisation ou leurs pratiques en matière de données personnelles, et décline toute responsabilité à cet égard.
 
-La création d'un lien vers Le Coin du Ring est libre et ne requiert pas d'autorisation préalable, dès lors qu'elle ne porte pas atteinte à l'image du site et n'induit pas de confusion sur l'origine des contenus.
+La création d'un lien vers La Garde Haute est libre et ne requiert pas d'autorisation préalable, dès lors qu'elle ne porte pas atteinte à l'image du site et n'induit pas de confusion sur l'origine des contenus.
 
 ## Signalement d'un contenu
 

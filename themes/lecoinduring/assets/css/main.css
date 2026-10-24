@@ -1,5 +1,5 @@
 /* ========================================
-   Le Coin du Ring - variante B "une de journal sportif"
+   La Garde Haute - variante B "une de journal sportif"
    Papier crème, encre noire, filets épais, rouge gant et bleu de l'autre coin.
    Structure magazine : masthead, une + brèves, bandes par rubrique, split, reprises.
    ======================================== */
@@ -406,6 +406,7 @@ section[id] { scroll-margin-top: 64px; }
     .wrap { width: calc(100% - 32px); }
     .masthead { padding-top: 24px; }
     .mast-tagline { letter-spacing: .16em; font-size: .85rem; gap: 12px; }
+    .foot-tagline { letter-spacing: .16em; font-size: .8rem; gap: 12px; }
     .locker { grid-template-columns: 1fr 1fr; }
     .board li { grid-template-columns: 34px 1fr auto; }
     .board li a { font-size: 1.1rem; }
@@ -584,7 +585,7 @@ section[id] { scroll-margin-top: 64px; }
 .author-kicker span::before { left: 0; }
 .author-kicker span::after { right: 0; }
 .author-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 22px; align-items: start; }
-.author-seal .logo-mark { width: 64px; height: 64px; outline: 2px solid var(--encre); outline-offset: 4px; }
+.author-seal .logo-mark { width: 64px; height: 64px; border-radius: 50%; outline: 2px solid var(--encre); outline-offset: 4px; }
 .author-name { font-family: var(--font-display); text-transform: uppercase; font-size: 1.7rem; line-height: 1.05; margin-bottom: 8px; }
 .author-note { font-family: var(--font-serif); font-style: italic; font-size: 1.1rem; line-height: 1.55; color: var(--gris); }
 .author-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(14, 14, 16, .25); }
