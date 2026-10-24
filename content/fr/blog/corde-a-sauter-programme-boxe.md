@@ -2,7 +2,7 @@
 title: "Corde à sauter : comment l'utiliser pour tenir les reprises"
 description: "Choisir sa corde, sauter proprement, progresser et structurer ses séances en reprises de trois minutes : le guide de la corde à sauter pour boxeurs."
 date: 2026-10-17T10:30:00+02:00
-lastmod: 2026-10-17T10:30:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Prépa physique"]
 tags: ["corde à sauter", "cardio", "échauffement"]
 image: "/images/blog/corde-a-sauter-programme-boxe.webp"
@@ -64,7 +64,7 @@ La corde sert aussi d'échauffement. Un échauffement dure en général entre 15
 - Étire-toi avant et après, et garde de l'eau à portée de main.
 - Ne saute pas à côté de quelqu'un d'autre.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Progresse selon ta forme, sans te forcer, et prends des temps de repos entre les séries. La corde est un outil de préparation, pas une épreuve à gagner en une séance.
 {{< /encadre >}}
 

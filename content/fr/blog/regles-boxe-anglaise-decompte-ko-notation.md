@@ -2,7 +2,7 @@
 title: "Règles de la boxe anglaise : rounds, décompte, KO et notation"
 description: "Durée des rounds en amateur et en pro, coups autorisés et interdits, décompte, KO et KO technique, notation des juges : les règles de la boxe anglaise expliquées simplement."
 date: 2026-10-20T08:00:00+02:00
-lastmod: 2026-10-20T08:00:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Analyses"]
 tags: ["règles", "boxe anglaise", "arbitrage"]
 image: "/images/blog/regles-boxe-anglaise-decompte-ko-notation.webp"
@@ -109,7 +109,7 @@ En amateur, la Fédération française de boxe compte **13 catégories chez les 
 - **Tenue** : en amateur, débardeur et short qui ne descend pas sous le genou. En professionnel, torse nu chez les hommes.
 - **Casque** : obligatoire en amateur pour les femmes et les jeunes, retiré chez les seniors hommes, et jamais porté en professionnel.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Pour suivre un combat aux points, compte les coups qui arrivent vraiment sur la cible, pas ceux qui sont lancés. Note qui fait reculer l'autre et qui reste actif jusqu'au gong. C'est, en simplifiant, ce que regardent les juges amateurs.
 {{< /encadre >}}
 

@@ -2,7 +2,7 @@
 title: "Gants de boxe : quelle taille en onces choisir selon ton poids et ton usage"
 description: "L'once mesure le rembourrage, pas la taille de la main. Repères par poids, par usage (sac, entraînement, sparring), matières et fermetures pour bien choisir."
 date: 2026-10-17T09:00:00+02:00
-lastmod: 2026-10-17T09:00:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Équipements"]
 tags: ["gants de boxe", "équipement", "débutant"]
 image: "/images/blog/gants-de-boxe-quelle-taille-en-onces.webp"
@@ -71,7 +71,7 @@ Le poignet et la main subissent des torsions fréquentes : un bon gant amortit l
 
 La plupart des modèles sont mixtes. Certains sont conçus pour les femmes, avec une cage intérieure plus petite, adaptée à des mains plus fines.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Avant d'acheter, demande à ton club ce qu'il fournit et ce qu'il impose pour le sparring. Beaucoup de clubs prêtent des gants pour un premier cours, et le règlement de la salle l'emporte sur n'importe quelle grille.
 {{< /encadre >}}
 

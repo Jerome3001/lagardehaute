@@ -2,7 +2,7 @@
 title: "Préparation physique du boxeur : cardio, force et filières énergétiques"
 description: "Ce que le combat demande au corps : filières anaérobie et aérobie, renforcement, course, épaules et tronc. Les bases d'une préparation physique en boxe."
 date: 2026-10-17T11:00:00+02:00
-lastmod: 2026-10-17T11:00:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Prépa physique"]
 tags: ["préparation physique", "cardio", "renforcement", "course"]
 image: "/images/blog/preparation-physique-boxeur-cardio-force-filieres.webp"
@@ -66,6 +66,6 @@ La corde à sauter combine le cardio, la coordination et les appuis. Voir [notre
 
 ## Prudence
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Si tu n'as pas passé de contrôle d'aptitude médical depuis plus d'un an, fais-en un avant de t'y mettre. La charge de travail s'adapte à ton niveau : avance progressivement, et écoute ton corps.
 {{< /encadre >}}

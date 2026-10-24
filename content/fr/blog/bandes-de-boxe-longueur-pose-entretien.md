@@ -2,7 +2,7 @@
 title: "Bandes de mains : les choisir, les poser, les entretenir"
 description: "Longueur, matière, pose pas à pas, tension et entretien : tout ce qu'il faut savoir sur les bandes de boxe pour protéger tes mains et tes poignets."
 date: 2026-10-17T09:30:00+02:00
-lastmod: 2026-10-17T09:30:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Équipements"]
 tags: ["bandes de boxe", "équipement", "protection"]
 image: "/images/blog/bandes-de-boxe-longueur-pose-entretien.webp"
@@ -76,6 +76,6 @@ Pour le sac, tu peux serrer un peu plus que pour le sparring : en sparring, les 
 - Lave-toi les mains avec un savon adapté avant et après l'entraînement pour éviter irritations et problèmes de peau.
 - Remplace les bandes qui ne tiennent plus à plat, qui s'amincissent sur les phalanges ou qui se relâchent sans cesse.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 N'enroule pas tes mains sur une douleur vive aux phalanges ou au poignet. Réduis la puissance, évite le sac lourd, et si la douleur persiste, fais-la examiner par un professionnel de santé.
 {{< /encadre >}}

@@ -2,7 +2,7 @@
 title: "Puncheur, contreur, pressing : comment lire un style de boxe"
 description: "Boxeur de distance, pressing, frappeur, contreur, boxeur-puncheur : les grands styles de boxe expliqués, avec ce qu'il faut repérer pendant un combat."
 date: 2026-10-17T16:30:00+02:00
-lastmod: 2026-10-17T16:30:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Analyses"]
 tags: ["styles de boxe", "technique", "tactique"]
 image: "/images/blog/styles-de-boxe-puncheur-contreur-pressing.webp"
@@ -113,7 +113,7 @@ On résume parfois les oppositions façon pierre-feuille-ciseaux. Il y a du vrai
 
 Ce sont des tendances d'analyste, pas des lois. Le boxeur-puncheur échappe d'ailleurs à ce jeu, précisément parce qu'il peut changer de plan.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Pour identifier les styles en présence, regarde d'abord la distance : qui l'impose, qui la subit ? C'est souvent la clé qui ouvre toutes les autres lectures.
 {{< /encadre >}}
 

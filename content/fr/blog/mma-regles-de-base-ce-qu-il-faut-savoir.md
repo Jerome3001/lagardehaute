@@ -2,7 +2,7 @@
 title: "MMA : les règles de base pour comprendre un combat"
 description: "Rounds, façons de gagner, notation, coups interdits, équipement : les règles unifiées du MMA expliquées pour suivre un combat sans se perdre."
 date: 2026-10-17T12:00:00+02:00
-lastmod: 2026-10-17T12:00:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Sports de combat"]
 tags: ["MMA", "règles", "UFC"]
 image: "/images/blog/mma-regles-de-base-ce-qu-il-faut-savoir.webp"
@@ -75,7 +75,7 @@ Les règles unifiées n'imposent pas de cage. La plupart des organisations nord-
 
 Les limites de catégories varient selon les organisations. Elles s'étendent d'environ 57 kg pour les poids mouches à 120 kg pour les poids lourds.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Pour suivre un combat, garde trois questions en tête : qui frappe de façon efficace ? Qui contrôle le combat, debout comme au sol ? Qui impose le rythme ? Ce sont, dans cet ordre, les critères des juges.
 {{< /encadre >}}
 

@@ -2,7 +2,7 @@
 title: "Garde orthodoxe, garde gauchère : ce que ça change pour l'adversaire"
 description: "Pied avant, angles, jeu de distance : ce qui distingue la garde orthodoxe de la garde gauchère, ce que disent les chiffres et les principes à tester en sparring."
 date: 2026-10-17T10:00:00+02:00
-lastmod: 2026-10-17T10:00:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Analyses"]
 tags: ["garde", "gaucher", "technique", "tactique"]
 image: "/images/blog/garde-orthodoxe-garde-gauchere-ce-que-ca-change.webp"
@@ -58,7 +58,7 @@ Les deux gardes ont chacune leur arme :
 
 On dit aussi que la garde gauchère est vulnérable à un direct du droit, et que le gaucher doit anticiper cette frappe, qu'un orthodoxe frustré aura tendance à armer plus fort.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Ces principes sont des repères, pas des règles. Tous les entraîneurs ne sont pas d'accord sur le détail du placement, notamment dans certains échanges de jambes. Teste-les en sparring avec ton entraîneur, idéalement contre un vrai gaucher.
 {{< /encadre >}}
 

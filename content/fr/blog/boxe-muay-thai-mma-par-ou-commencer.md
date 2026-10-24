@@ -2,7 +2,7 @@
 title: "Boxe, muay thaï, MMA : par où commencer ?"
 description: "Ce qui est autorisé dans chaque discipline, comment se déroule un combat, comment choisir sa salle : le guide pour choisir son premier sport de combat."
 date: 2026-10-17T11:30:00+02:00
-lastmod: 2026-10-17T11:30:00+02:00
+lastmod: 2026-10-24T12:00:00+02:00
 categories: ["Sports de combat"]
 tags: ["boxe anglaise", "muay thaï", "MMA", "débuter"]
 image: "/images/blog/boxe-muay-thai-mma-par-ou-commencer.webp"
@@ -69,6 +69,6 @@ Voici ce qui revient le plus souvent chez les entraîneurs :
 
 Les gants de boxe sont communs à toutes les boxes pieds-poings, avec des bandes de mains et un protège-dents. Avant d'acheter, demande à ton club ce qu'il fournit : beaucoup prêtent du matériel pour un premier cours. Nos guides sur [la taille des gants]({{< relref "gants-de-boxe-quelle-taille-en-onces" >}}) et sur [les bandes de mains]({{< relref "bandes-de-boxe-longueur-pose-entretien" >}}) t'aideront à acheter malin.
 
-{{< encadre titre="Le conseil du coin" >}}
+{{< encadre titre="Le conseil de la rédaction" >}}
 Fais un ou deux cours d'essai dans des disciplines différentes avant de t'inscrire. Et si tu n'as pas passé de contrôle médical depuis plus d'un an, fais-en un avant de débuter : la boxe sollicite fortement le système cardio-circulatoire et les articulations.
 {{< /encadre >}}
