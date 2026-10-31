@@ -2,13 +2,13 @@
 title: "Catégories de poids en boxe : amateur, pro, Jeux olympiques et pesée"
 description: "Les catégories de poids en boxe anglaise : les 17 divisions pro en livres et en kilos, la grille amateur française, les Jeux olympiques et le rôle de la pesée."
 date: 2026-10-31T08:00:00+01:00
-lastmod: 2026-10-31T08:00:00+01:00
+lastmod: 2026-10-31T17:00:00+01:00
 categories: ["Analyses"]
 tags: ["catégories de poids", "pesée", "boxe anglaise", "règles"]
 image: "/images/blog/categories-de-poids-boxe-amateur-pro-pesee.webp"
-imageAlt: "Gros plan sur les mains d'un boxeur qui règle le curseur d'une balance à fléau lors d'une pesée, photographie de presse de 1942"
-imageCredit: "Photo : auteur inconnu (domaine public), via Wikimedia Commons. Image retouchée (trame de journal)."
-imageSource: "https://commons.wikimedia.org/wiki/File:Manuel_Ortiz_weigh-in_1942.jpg"
+imageAlt: "Gravure ancienne d'un combat de boxe à mains nues en plein air : deux boxeurs torse nu s'affrontent, entourés de leurs seconds et de la foule"
+imageCredit: "Gravure : Thomas Rowlandson, 1810 (domaine public), via Wikimedia Commons. Image retouchée (trame de journal)."
+imageSource: "https://commons.wikimedia.org/wiki/File:Boxing_match_for_200_guineas,_betwixt_Dutch_Sam_and_Medley_Fought_31_May_1810,_on_Moulsey_Hurst_near_Hampton_-_DPLA_-_67a9957e6ab86c505119cf58a0c17e35.jpg"
 faq:
   - question: "Combien y a-t-il de catégories de poids en boxe professionnelle ?"
     answer: "Dix-sept, des poids pailles (jusqu'à 105 livres, environ 47,6 kg) aux poids lourds (plus de 200 livres, environ 90,7 kg). Le WBC en reconnaît une dix-huitième, les poids bridger, entre les lourds-légers et les lourds, jusqu'à 224 livres, environ 101,6 kg."

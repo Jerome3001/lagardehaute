@@ -478,6 +478,8 @@ section[id] { scroll-margin-top: 64px; }
 .prose h3, .prose th, .faq summary, .callout-title { font-family: var(--font-cond); }
 .prose > p:first-child::first-letter { float: left; font-family: var(--font-display); font-size: 5.4em; line-height: .8; padding: .07em .1em 0 0; color: var(--rouge); }
 .prose blockquote { font-size: 1.7rem; }
+/* bloc « À retenir » (citation contenant une liste) : corps de texte, pas citation mise en avant */
+.prose blockquote:has(ul, ol) { font-size: 1.12rem; line-height: 1.6; }
 .prose table { font-family: var(--font-body); }
 .callout p, .faq details p { font-family: var(--font-serif); font-size: 1.1rem; }
 .byline { padding-top: 14px; border-top: 1px solid var(--encre); max-width: 44rem; }
