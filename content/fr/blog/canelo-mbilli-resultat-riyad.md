@@ -2,7 +2,7 @@
 title: "Canelo-Mbilli : résultat, cartons et ce qu'il faut retenir du combat de Riyad"
 description: "Canelo Alvarez bat Christian Mbilli aux points et reprend la ceinture WBC des super-moyens. Cartons, point retiré, chiffres du combat et suite possible."
 date: 2026-11-03T08:00:00+01:00
-lastmod: 2026-11-03T10:07:00+01:00
+lastmod: 2026-11-03T10:24:00+01:00
 categories: ["Actus"]
 tags: ["résultats", "WBC", "super-moyens", "Riyad", "Canelo", "Mbilli"]
 image: "/images/blog/canelo-mbilli-resultat-riyad.webp"
@@ -55,11 +55,11 @@ Le point retiré n'a rien décidé : en le rendant à Mbilli, Canelo restait dev
 Selon le décompte CompuBox, le service de statistiques de référence en boxe :
 
 - **Coups de puissance touchés :** 132 pour Canelo, 99 pour Mbilli.
-- **Coups lancés par reprise :** environ 42 pour Canelo, 56 pour Mbilli.
-- **Coups touchés par reprise :** un peu plus de 13 pour Canelo (31 %), environ 10 pour Mbilli (moins de 20 %).
+- **Coups lancés par reprise :** environ 42 pour Canelo, environ 60 pour Mbilli.
+- **Coups touchés par reprise :** un peu plus de 13 pour Canelo (31 %), environ 11 pour Mbilli (17,5 %).
 - **Jabs :** à peine 26 touchés à eux deux sur tout le combat. C'était un combat de coups lourds, pas de jab.
 
-Le chiffre le plus parlant concerne le Français : il tournait à 78 coups par reprise avant ce combat, et il n'en a lancé que 56. Canelo, à l'inverse, a été plus actif que ses 35 coups par reprise habituels chez les super-moyens.
+Le chiffre le plus parlant concerne le Français : il tournait à 78 coups par reprise avant ce combat, et il n'en a lancé qu'environ 60. Canelo, à l'inverse, a été plus actif que ses 35 coups par reprise habituels chez les super-moyens.
 
 ## Pourquoi Canelo a gagné
 
