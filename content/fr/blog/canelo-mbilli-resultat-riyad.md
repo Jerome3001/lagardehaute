@@ -2,13 +2,14 @@
 title: "Canelo-Mbilli : résultat, cartons et ce qu'il faut retenir du combat de Riyad"
 description: "Canelo Alvarez bat Christian Mbilli aux points et reprend la ceinture WBC des super-moyens. Cartons, point retiré, chiffres du combat et suite possible."
 date: 2026-11-03T08:00:00+01:00
-lastmod: 2026-11-03T08:00:00+01:00
+lastmod: 2026-11-03T10:07:00+01:00
 categories: ["Actus"]
 tags: ["résultats", "WBC", "super-moyens", "Riyad", "Canelo", "Mbilli"]
 image: "/images/blog/canelo-mbilli-resultat-riyad.webp"
-imageAlt: "Ring vu depuis le public d'une salle de boxe, l'arbitre levant le bras du vainqueur à l'issue d'un combat amateur"
-imageCredit: "Photo : Ismael Ortega, U.S. Army (domaine public), via Wikimedia Commons. Image retouchée (trame de journal)."
-imageSource: "https://commons.wikimedia.org/wiki/File:USAG_Bavaria_Boxing_Invitational_Championship_(6790646).jpg"
+imageAlt: "Ceinture verte et or du WBC posée sur une table, photographiée en 2011, avec des médaillons de portraits sur la sangle"
+imageCredit: "Ceinture WBC photographiée en 2011, pas celle de ce combat. Photo : Sławek, CC BY-SA 2.0, via Wikimedia Commons. Image retouchée (trame de journal), diffusée sous la même licence."
+imageSource: "https://commons.wikimedia.org/wiki/File:VitaliKlitschkoWBCbelt.jpg"
+imageLicenseUrl: "https://creativecommons.org/licenses/by-sa/2.0"
 faq:
   - question: "Qui a gagné entre Canelo et Mbilli ?"
     answer: "Saul « Canelo » Alvarez, par décision unanime des juges après douze reprises (115-112, 116-111 et 117-110). Il reprend la ceinture WBC des super-moyens au Français Christian Mbilli, qui subit la première défaite de sa carrière professionnelle."
@@ -59,10 +60,6 @@ Selon le décompte CompuBox, le service de statistiques de référence en boxe :
 - **Jabs :** à peine 26 touchés à eux deux sur tout le combat. C'était un combat de coups lourds, pas de jab.
 
 Le chiffre le plus parlant concerne le Français : il tournait à 78 coups par reprise avant ce combat, et il n'en a lancé que 56. Canelo, à l'inverse, a été plus actif que ses 35 coups par reprise habituels chez les super-moyens.
-
-{{< encadre titre="Attention aux chiffres qui circulent" >}}
-Un autre décompte a beaucoup tourné après le combat : 324 coups lancés et 91 touchés pour Mbilli, 186 lancés et 132 touchés pour Canelo. Nous ne le retenons pas. Il donnerait à Canelo 71 % de réussite, très loin des 31 % de CompuBox, et ses 132 touchés correspondent en réalité à ses seuls coups de puissance.
-{{< /encadre >}}
 
 ## Pourquoi Canelo a gagné
 
