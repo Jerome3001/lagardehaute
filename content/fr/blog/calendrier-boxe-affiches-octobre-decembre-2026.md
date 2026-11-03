@@ -1,8 +1,8 @@
 ---
 title: "Calendrier de la boxe : les grandes affiches jusqu'à Noël 2026"
-description: "Canelo-Mbilli, Kabayel-Hysa, Fury-Joshua : les grandes affiches annoncées jusqu'à fin décembre 2026, avec dates, lieux et diffuseurs, et le résultat de Dubois-Wardley 2."
+description: "Kabayel-Hysa, Fury-Joshua, Bivol-Smith : les grandes affiches annoncées jusqu'à fin décembre 2026, avec dates, lieux et diffuseurs, et les résultats de Canelo-Mbilli et Dubois-Wardley 2."
 date: 2026-10-17T13:00:00+02:00
-lastmod: 2026-10-24T12:00:00+02:00
+lastmod: 2026-11-03T08:00:00+01:00
 categories: ["Actus"]
 tags: ["calendrier", "affiches", "actualité"]
 image: "/images/blog/calendrier-boxe-affiches-octobre-decembre-2026.webp"
@@ -27,6 +27,10 @@ Les calendriers de la boxe changent vite : une affiche annoncée peut bouger, ê
 Les diffuseurs listés sont ceux annoncés pour les marchés anglo-saxons. Les droits varient selon les pays, et plusieurs événements n'avaient pas encore d'horaire ni de carte complète à la date du relevé.
 {{< /encadre >}}
 
+## Canelo-Mbilli : Canelo reprend la ceinture WBC
+
+Le **samedi 31 octobre** à Riyad, Canelo Alvarez a battu Christian Mbilli par décision unanime (115-112, 116-111 et 117-110) et repris la ceinture WBC des super-moyens. {{< lien-si-publie slug="canelo-mbilli-resultat-riyad" avant="Notre compte rendu détaille le " ancre="résultat de Canelo-Mbilli" apres=", le déroulé et les chiffres du combat." >}}
+
 ## Dubois-Wardley 2 : Dubois conserve sa ceinture au deuxième round
 
 Le **samedi 17 octobre**, au **O2 de Londres**, Daniel Dubois remettait en jeu sa ceinture mondiale des poids lourds WBO face à Fabio Wardley. La revanche a tourné court. Dubois a envoyé Wardley au tapis d'une droite dans les premières secondes du combat. Au deuxième round, le coin de Wardley a jeté l'éponge et l'arbitre Steve Gray a arrêté le combat. Dubois reste champion WBO.
@@ -39,9 +43,6 @@ Présent au bord du ring, le champion IBF Filip Hrgovic a défié Dubois pour un
 
 | Date | Affiche | Lieu | Diffuseur annoncé |
 |---|---|---|---|
-| Sam. 24 oct. | Dalton Smith contre Alberto Puello | Utilita Arena, Sheffield (Angleterre) | DAZN |
-| Sam. 24 oct. | Emanuel Navarrete contre O'Shaquie Foster | San Antonio (États-Unis) | DAZN |
-| Sam. 31 oct. | Canelo Alvarez contre Christian Mbilli | The Venue, Riyad (Arabie saoudite) | DAZN, en paiement à la séance |
 | Sam. 7 nov. | Joshua Buatsi contre Willy Hutchinson | AO Arena, Manchester (Angleterre) | Non confirmé |
 | Sam. 7 nov. | Chris Billam-Smith contre Cheavon Clarke | Copper Box Arena, Londres | Selon les pays |
 | Ven. 20 nov. | Lauren Price contre Michaela Kotaskova | Utilita Arena, Cardiff (Pays de Galles) | Non confirmé |
@@ -51,9 +52,7 @@ Présent au bord du ring, le champion IBF Filip Hrgovic a défié Dubois pour un
 | Sam. 12 déc. | Dmitry Bivol contre Callum Smith | Iekaterinbourg (Russie) | Non précisé |
 | Sam. 19 déc. | Anthony Cacace contre Nick Ball | Belfast (Irlande du Nord) | DAZN |
 
-## Les trois gros rendez-vous
-
-**Canelo contre Mbilli, le 31 octobre à Riyad.** Christian Mbilli détient la ceinture WBC des super-moyens : ce sera sa première défense. La soirée, organisée à The Venue dans le cadre de la Riyadh Season, est annoncée avec dix combats. Le promoteur Turki Alalshikh a confirmé le 11 octobre que le combat de Canelo restait programmé.
+## Les deux gros rendez-vous
 
 **Kabayel contre Hysa, le 28 novembre à Düsseldorf.** Agit Kabayel, devenu champion WBC des poids lourds en titre, fera sa première défense dans le stade de Düsseldorf face à l'Albanais Nelson Hysa. Les deux hommes sont invaincus chez les professionnels. La date a été confirmée début octobre par le promoteur Frank Warren.
 
@@ -66,4 +65,4 @@ Présent au bord du ring, le champion IBF Filip Hrgovic a défié Dubois pour un
 - Les adversaires des cartes secondaires peuvent changer jusqu'à la dernière minute : lors de la soirée de Chicago du 10 octobre, des remplacements ont eu lieu sur plusieurs combats.
 - Les horaires sont souvent publiés tard, parfois seulement quelques jours avant la soirée.
 
-Relevé effectué le 24 octobre 2026.
+Affiches à venir relevées le 24 octobre 2026. Résultat de Canelo-Mbilli ajouté et affiches passées retirées le 3 novembre 2026.

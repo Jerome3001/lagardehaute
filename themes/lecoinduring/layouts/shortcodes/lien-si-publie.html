@@ -1,0 +1,3 @@
+{{- /* Insère une phrase avec un lien vers un article seulement si cet article est publié. Usage : {{< lien-si-publie slug="lego-rangement" avant="texte avant " ancre="texte du lien" apres=" texte après" >}} */ -}}
+{{- $p := site.GetPage (printf "/blog/%s" (.Get "slug")) -}}
+{{- if $p -}}{{ .Get "avant" }}<a href="{{ $p.RelPermalink }}">{{ .Get "ancre" }}</a>{{ .Get "apres" }}{{- end -}}
