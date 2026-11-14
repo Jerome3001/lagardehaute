@@ -6,10 +6,9 @@ lastmod: 2026-11-14T08:00:00+01:00
 categories: ["Analyses"]
 tags: ["jeu de jambes", "shadow boxing", "technique", "débutant"]
 image: "/images/blog/jeu-de-jambes-boxe-shadow-boxing-les-bases.webp"
-imageAlt: "Silhouettes de deux boxeurs qui s'entraînent face à face sur une plage au crépuscule, un troisième les observe"
-imageCredit: "Photo : Krigers Naidoo, CC BY-SA 4.0, via Wikimedia Commons. Image retouchée (trame de journal), diffusée sous la même licence."
-imageSource: "https://commons.wikimedia.org/wiki/File:Beach_boxers.jpg"
-imageLicenseUrl: "https://creativecommons.org/licenses/by-sa/4.0"
+imageAlt: "Jambes et pieds d'un groupe de pratiquants alignés en position de garde devant un ring"
+imageCredit: "Photo : U.S. Air Force photo by Airman 1st Class Zeeshan Naeem (domaine public), via Wikimedia Commons. Image retouchée (trame de journal)."
+imageSource: "https://commons.wikimedia.org/wiki/File:%22Deterrence_through_strength%E2%80%9D-_Lt_Col_Trumble_on_Boxing_and_Air_Force_readiness_(8925940).jpg"
 faq:
   - question: "C'est quoi le jeu de jambes en boxe ?"
     answer: "C'est l'ensemble des déplacements et des appuis du boxeur. Un bon jeu de jambes permet de se déplacer vite dans toutes les directions tout en restant assez stable pour frapper de façon contrôlée. Il sert autant à attaquer qu'à esquiver et à gérer la distance."
