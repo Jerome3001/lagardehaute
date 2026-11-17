@@ -2,7 +2,7 @@
 title: "Équipement de boxe pour débutant : quoi acheter, et ce qui peut attendre"
 description: "Gants, bandes, protège-dents, casque, coquille, chaussures : ce qu'il faut acheter pour débuter la boxe, à quel moment, et ce que tu peux garder pour plus tard."
 date: 2026-11-07T08:00:00+01:00
-lastmod: 2026-11-07T08:00:00+01:00
+lastmod: 2026-11-17T08:00:00+01:00
 categories: ["Équipements"]
 tags: ["équipement", "débutant", "gants de boxe", "protections"]
 image: "/images/blog/equipement-boxe-debutant-quoi-acheter.webp"
@@ -95,7 +95,7 @@ Si tu vises la compétition amateur, le règlement ajoute ses propres exigences 
 
 - **Les chaussures de boxe.** Plates et montantes, elles offrent un bon maintien de la cheville, surtout sur un sol dur. Certains guides les rangent parmi les indispensables, mais elles arrivent logiquement après les gants et les protections, quand tu t'entraînes régulièrement. Demande quand même à ton club ce qu'il accepte.
 - **Le short et le débardeur de boxe.** Agréables, mais une tenue ample et respirante remplit la même fonction pour s'entraîner.
-- **Le sac de frappe.** Rien ne presse si tu t'entraînes en club. Il devient un sujet si tu veux travailler aussi chez toi.
+- **Le sac de frappe.** Rien ne presse si tu t'entraînes en club. Il devient un sujet si tu veux travailler aussi chez toi{{< lien-si-publie slug="sac-de-frappe-hauteur-poids-suspendu-ou-sur-pied" avant=" : notre guide pour choisir un " ancre="sac de frappe" apres=" détaille la hauteur, le poids et la fixation" >}}.
 - **Les gants de compétition.** Ils sont volontairement moins rembourrés : ils ne servent pas à l'entraînement.
 - **Le sac de sport, la serviette et les accessoires.** Ce que tu as à la maison fait l'affaire pour commencer.
 
