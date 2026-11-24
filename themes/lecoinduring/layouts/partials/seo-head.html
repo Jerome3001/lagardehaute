@@ -1,5 +1,6 @@
 {{- $isArticle := and .IsPage (eq .Section "blog") -}}
-{{- $desc := .Description | default site.Params.description -}}
+{{- $desc := .Params.seoDescription | default .Description | default site.Params.description -}}
+{{- $seoTitle := .Params.seoTitle | default .Title -}}
 {{- $orgID := printf "%s#organization" site.BaseURL -}}
 {{- $locale := site.Language.Locale | default "fr-FR" -}}
 {{- $image := "" -}}
@@ -20,7 +21,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="{{ if $isArticle }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:title" content="{{ .Title }}">
+<meta property="og:title" content="{{ $seoTitle }}">
 <meta property="og:description" content="{{ $desc }}">
 <meta property="og:site_name" content="{{ site.Title }}">
 <meta property="og:locale" content="{{ replace $locale "-" "_" }}">
@@ -30,7 +31,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:title" content="{{ $seoTitle }}">
 <meta name="twitter:description" content="{{ $desc }}">
 {{ with $image }}<meta name="twitter:image" content="{{ . }}">{{ end }}
 

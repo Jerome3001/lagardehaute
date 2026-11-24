@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ site.Title }} | Boxe : analyses, équipements et actus{{ else if eq .Kind "404" }}Page introuvable | {{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ site.Title }} | Boxe : analyses, équipements et actus{{ else if eq .Kind "404" }}Page introuvable | {{ site.Title }}{{ else }}{{ .Params.seoTitle | default .Title }} | {{ site.Title }}{{ end }}</title>
     {{ partial "seo-head.html" . }}
 
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,5 +1,7 @@
 ---
 title: "Garde haute, garde basse, Philly shell, peek-a-boo : les styles de garde en boxe"
+seoTitle: "Garde boxe : les 7 styles de garde expliqués"
+seoDescription: "Garde boxe : haute, basse, peek-a-boo, Philly shell, croisée… Où placer les mains, ce que chaque garde protège et ce qu'elle laisse ouvert."
 description: "Garde de boxe : classique, haute, peek-a-boo, Philly shell, basse, croisée ou longue. Où placer les mains, ce que chaque garde protège et ce qu'elle laisse ouvert."
 date: 2026-11-24T08:00:00+01:00
 lastmod: 2026-11-24T08:00:00+01:00
