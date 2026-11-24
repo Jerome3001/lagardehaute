@@ -2,7 +2,7 @@
 title: "Garde orthodoxe, garde gauchère : ce que ça change pour l'adversaire"
 description: "Pied avant, angles, jeu de distance : ce qui distingue la garde orthodoxe de la garde gauchère, ce que disent les chiffres et les principes à tester en sparring."
 date: 2026-10-17T10:00:00+02:00
-lastmod: 2026-10-24T12:00:00+02:00
+lastmod: 2026-11-24T08:00:00+01:00
 categories: ["Analyses"]
 tags: ["garde", "gaucher", "technique", "tactique"]
 image: "/images/blog/garde-orthodoxe-garde-gauchere-ce-que-ca-change.webp"
@@ -27,6 +27,8 @@ Dans une salle de boxe, la plupart des boxeurs se placent de la même façon. Qu
 En **garde orthodoxe**, la jambe gauche et, en général, le bras gauche sont en avant, le bras droit en arrière. C'est la position naturelle d'un droitier. La **garde gauchère**, appelée aussi *southpaw* en anglais ou « fausse patte » en français, en est l'image miroir : jambe droite et bras droit devant. Le bras de puissance, le gauche, reste en arrière, et le jab part du bras droit.
 
 On dit que deux boxeurs sont en **garde ouverte** quand l'un est orthodoxe et l'autre gaucher, et en **garde fermée** quand ils ont la même garde.
+
+{{< lien-si-publie slug="garde-boxe-styles-de-garde" avant="Orthodoxe ou gauchère, la garde se règle aussi avec les bras : garde haute, garde basse, Philly shell ou peek-a-boo, nous détaillons " ancre="les styles de garde en boxe" apres=" dans un article dédié." >}}
 
 Une précision souvent méconnue : la garde choisie n'est pas toujours celle de la main dominante. Elle relève d'un choix plus large que la simple latéralité, et certains boxeurs en garde de gaucher sont en réalité droitiers.
 
